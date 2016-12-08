@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Attendance" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kidId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="signIn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="signOut" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ChildCareDetails" representedClassName="ChildCareDetails" syncable="YES">
+        <attribute name="buildingName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="membershipId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primaryContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondaryContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suburb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CMSTextCopies" representedClassName="CMSTextCopies" syncable="YES">
+        <attribute name="cmsKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cmsValue" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LinkedChild" representedClassName="LinkedChild" syncable="YES">
+        <attribute name="childcarememid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dob" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imagepath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="childCareDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChildCareDetails" syncable="YES"/>
+    </entity>
+    <entity name="Meals" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kidId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mealsStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mealsType" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Naps" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finish" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kidId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ParentProfile" representedClassName="ParentProfile" syncable="YES">
+        <attribute name="parentEmailId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentMobileNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="parentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LinkedChild" syncable="YES"/>
+    </entity>
+    <entity name="PhotoAlbum" representedClassName="PhotoAlbum" syncable="YES">
+        <attribute name="dateTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kidId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photoText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteAddress" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Attendance" positionX="-18" positionY="144" width="128" height="105"/>
+        <element name="ChildCareDetails" positionX="-36" positionY="63" width="128" height="240"/>
+        <element name="CMSTextCopies" positionX="-45" positionY="117" width="128" height="75"/>
+        <element name="LinkedChild" positionX="-54" positionY="9" width="128" height="150"/>
+        <element name="Meals" positionX="-27" positionY="135" width="128" height="120"/>
+        <element name="Naps" positionX="-45" positionY="117" width="128" height="120"/>
+        <element name="ParentProfile" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="PhotoAlbum" positionX="-36" positionY="117" width="128" height="120"/>
+    </elements>
+</model>

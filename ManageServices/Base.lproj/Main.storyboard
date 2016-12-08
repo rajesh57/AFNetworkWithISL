@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vEv-GC-8Yd">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My6-UI-26E">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGg-P6-ND3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="CiO-Bk-bv9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="PWi-hh-fDz"/>
+                                    <constraint firstAttribute="height" constant="30" id="SQX-QD-lrv"/>
+                                </constraints>
+                                <state key="normal" title="Inspect DB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CiO-Bk-bv9"/>
+                                        <exclude reference="PWi-hh-fDz"/>
+                                        <exclude reference="SQX-QD-lrv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CiO-Bk-bv9"/>
+                                        <include reference="PWi-hh-fDz"/>
+                                        <include reference="SQX-QD-lrv"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="inspectDBAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0f-aD-fPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtD-N9-g3a">
+                                <rect key="frame" x="137" y="321" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RuO-bh-9KZ"/>
+                                    <constraint firstAttribute="width" constant="153" id="mtC-Ov-CQN"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RuO-bh-9KZ"/>
+                                        <exclude reference="mtC-Ov-CQN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RuO-bh-9KZ"/>
+                                        <include reference="mtC-Ov-CQN"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ir-LG-Yly"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BtD-N9-g3a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16b-gt-xhr"/>
+                            <constraint firstItem="HGg-P6-ND3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tH-eq-pBM"/>
+                            <constraint firstAttribute="trailing" secondItem="My6-UI-26E" secondAttribute="trailing" constant="97" id="9Kd-fy-ACf"/>
+                            <constraint firstItem="vEv-GC-8Yd" firstAttribute="top" secondItem="My6-UI-26E" secondAttribute="bottom" constant="28" id="REo-zy-1L5"/>
+                            <constraint firstItem="vEv-GC-8Yd" firstAttribute="leading" secondItem="My6-UI-26E" secondAttribute="leading" id="SB1-1l-422"/>
+                            <constraint firstItem="My6-UI-26E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="85" id="UZC-9g-GQd"/>
+                            <constraint firstItem="BtD-N9-g3a" firstAttribute="top" secondItem="vEv-GC-8Yd" secondAttribute="bottom" constant="31" id="gWN-Mn-NsR"/>
+                            <constraint firstItem="My6-UI-26E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="133" id="hN3-rT-ygt"/>
+                            <constraint firstItem="HGg-P6-ND3" firstAttribute="top" secondItem="BtD-N9-g3a" secondAttribute="bottom" constant="28" id="thy-wP-arG"/>
+                            <constraint firstItem="vEv-GC-8Yd" firstAttribute="trailing" secondItem="My6-UI-26E" secondAttribute="trailing" id="yVC-zK-F09"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vEv-GC-8Yd"/>
+                                <exclude reference="My6-UI-26E"/>
+                                <exclude reference="HGg-P6-ND3"/>
+                                <exclude reference="BtD-N9-g3a"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9Kd-fy-ACf"/>
+                                <exclude reference="UZC-9g-GQd"/>
+                                <exclude reference="hN3-rT-ygt"/>
+                                <exclude reference="REo-zy-1L5"/>
+                                <exclude reference="SB1-1l-422"/>
+                                <exclude reference="yVC-zK-F09"/>
+                                <exclude reference="16b-gt-xhr"/>
+                                <exclude reference="gWN-Mn-NsR"/>
+                                <exclude reference="7tH-eq-pBM"/>
+                                <exclude reference="thy-wP-arG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vEv-GC-8Yd"/>
+                                <include reference="My6-UI-26E"/>
+                                <include reference="HGg-P6-ND3"/>
+                                <include reference="BtD-N9-g3a"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9Kd-fy-ACf"/>
+                                <include reference="UZC-9g-GQd"/>
+                                <include reference="hN3-rT-ygt"/>
+                                <include reference="REo-zy-1L5"/>
+                                <include reference="SB1-1l-422"/>
+                                <include reference="yVC-zK-F09"/>
+                                <include reference="16b-gt-xhr"/>
+                                <include reference="gWN-Mn-NsR"/>
+                                <include reference="7tH-eq-pBM"/>
+                                <include reference="thy-wP-arG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="vEv-GC-8Yd" id="Deu-Gp-IgF"/>
+                        <outlet property="usernameTextField" destination="My6-UI-26E" id="83I-oQ-MQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="278.25"/>
+        </scene>
+    </scenes>
+</document>
